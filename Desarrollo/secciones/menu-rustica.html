@@ -64,25 +64,26 @@
         <section class="row mb-4">
             <div class="col-12 d-flex flex-wrap justify-content-start gap-2">
                 <button type="button" class="btn btn-sm btn-dark rounded-pill active">Todo</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">Sin Tacc</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">SinTacc</button>
                 <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">Vegano</button>
                 <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">Healthy</button>
             </div>
         </section>
 
         <section class="menu-catalogo">
+            <section>
             
-            <h2 class="h4 fw-bold mb-3">Shaken Espresso</h2>
+            <h2 class="h4 fw-bold mb-3">Bebidas Calientes</h2>
             <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
                 
-                <div class="col">
+                <div class="col" data-filter="todo healthy vegano">
                     <div class="card h-100 border-0 shadow-sm product-card">
                         <div class="card-img-top ratio ratio-1x1 bg-light">
-                            <img src="../assets/img/STARBUCKS/2022-03_Caramel Frapp 425x425 sin fondo (1).png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                            <img src="../Assets/img/RUSTICA/cafe.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
                         </div>
                         <div class="card-body p-2 position-relative">
-                            <h5 class="card-title h6 mb-0">Avellana c/Bebida de Avena</h5>
-                            <p class="card-text fw-bold text-success mb-0">$6.400</p>
+                            <h5 class="card-title h6 mb-0">Cafe Expresso</h5>
+                            <p class="card-text fw-bold text-success mb-0">$6.050</p>
                             <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
                                 <i class="bi bi-heart"></i> 
                             </button>
@@ -90,31 +91,579 @@
                     </div>
                 </div>
                 
-                <div class="col">
+                <div class="col" data-filter="todo">
                     <div class="card h-100 border-0 shadow-sm product-card">
                         <div class="card-img-top ratio ratio-1x1 bg-light">
-                            <img src="../assets/img/STARBUCKS/2022-03_Mocha Frapp 425x425 sin fondo.png" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                            <img src="../Assets/img/RUSTICA/latte saborizado.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
                         </div>
                         <div class="card-body p-2 position-relative">
-                            <h5 class="card-title h6 mb-0">Chocolate c/Bebida de Avena</h5>
-                            <p class="card-text fw-bold text-success mb-0">$6.500</p>
+                            <h5 class="card-title h6 mb-0">Latte saborizado</h5>
+                            <p class="card-text fw-bold text-success mb-0">$6.600</p>
                             <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
-                                <i class="bi bi-heart-fill text-danger"></i> </button>
+                                <i class="bi bi-heart"></i> 
+                            </button>
                         </div>
                     </div>
                 </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/te.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Te</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.140</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            
-            <h2 class="h4 fw-bold mb-3">Cafés Calientes</h2>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/submarino.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Cafe Submarino</h5>
+                            <p class="card-text fw-bold text-success mb-0">$6.050</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/caramel latte.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Caramel Latte</h5>
+                            <p class="card-text fw-bold text-success mb-0">$6.600</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/latte choco.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Latte Choco-Avellanas</h5>
+                            <p class="card-text fw-bold text-success mb-0">$7.550</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/kinder latte.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Kider Latte</h5>
+                            <p class="card-text fw-bold text-success mb-0">$7.740</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+            <h2 class="h4 fw-bold mb-3"> Bebidas Frias</h2>
             <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+                <div class="col" data-filter="todo healthy vegano">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/jugonaranja.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Jugo 100% fruta</h5>
+                            <p class="card-text fw-bold text-success mb-0">$4.000</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="col" data-filter="todo healthy vegano">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/aguacongas.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Agua con gas</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.340</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             
+        </section>
+        <section>
+            <h2 class="h4 fw-bold mb-3"> Panaderia</h2>
+            <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/danesas.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Facturas</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.850</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo sintacc">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/chipa.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Chipa</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.740</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/pan de q.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Palitos de Queso</h5>
+                            <p class="card-text fw-bold text-success mb-0">$1.170</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/pan de choc.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Pan de Chocolate</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.800</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/medialuna.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Medialuna</h5>
+                            <p class="card-text fw-bold text-success mb-0">$1.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/scon dulce.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Scon Dulce</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.230</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/palmera.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Palmera</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.400</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/roll.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Roll de canela</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.600</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/scon de q.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Scon de Queso</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.600</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/cremonajq.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Cremona de Jamon y Queso</h5>
+                            <p class="card-text fw-bold text-success mb-0">$5.050</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/Cuadrado de torta.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Cuadrado Dulce</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.900</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/Cuadrado dulce.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Cuadrado de Torta</h5>
+                            <p class="card-text fw-bold text-success mb-0">$4.050</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/croissant relleno.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Croissant Relleno Dulce</h5>
+                            <p class="card-text fw-bold text-success mb-0">$4.400</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/medialunajq.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Medialuna de Jamon y Queso</h5>
+                            <p class="card-text fw-bold text-success mb-0">$5.650</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo"> 
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/torta en vaso.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Torta en vaso</h5>
+                            <p class="card-text fw-bold text-success mb-0">$5.050</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/tostadojq.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Tostado Jamon y Queso</h5>
+                            <p class="card-text fw-bold text-success mb-0">$5.450</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo healthy">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/TriffleGRanola.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Granola y Fruta</h5>
+                            <p class="card-text fw-bold text-success mb-0">$5.050</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/budin.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Porcion de Budin</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.700</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/porcion de torta.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Porcion de Torta</h5>
+                            <p class="card-text fw-bold text-success mb-0">$7.350</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/cokie decorada.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Cookie Decorada</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.700</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/crumble cookies.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Crumble cookies</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.450</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            
+            <h2 class="h4 fw-bold mb-3">Fitness</h2>
+            <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+
+               <div class="col" data-filter="todo healthy">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/barra casera.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Barra de cereal casera</h5>
+                            <p class="card-text fw-bold text-success mb-0">$4.650</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col" data-filter="todo healthy">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/barra proteica point.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Barra de cereal Proteica</h5>
+                            <p class="card-text fw-bold text-success mb-0">$4.900</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col" data-filter="todo healthy vegano">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/barra proteica vegana.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Barra de cereal vegana</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.340</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+
+            </div>
+        </section>
+
+        <section>
+            
+            <h2 class="h4 fw-bold mb-3">Sandwichs</h2>
+            <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+        
+               <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/san cesar.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Ciabatta Cesar</h5>
+                            <p class="card-text fw-bold text-success mb-0">$7.850</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/salae y queso.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Pebete de Salame y Queso</h5>
+                            <p class="card-text fw-bold text-success mb-0">$6.050</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/lomito y chedar.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Sandwich de Lomito y Cheddar</h5>
+                            <p class="card-text fw-bold text-success mb-0">$7.150</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/RUSTICA/lomito y queso.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Fosforito de Lomito y Queso</h5>
+                            <p class="card-text fw-bold text-success mb-0">$5.400</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
         
     </main>
 
     <footer class="bg-uade-dark text-white py-3 mt-auto">
-        </footer>
+        <div class="container text-center">
+            <p class="mb-0 small">&copy; 2025 UADEATS. Todos los derechos reservados.</p>
+            <p class="mb-0 small"><a href="secciones/contacto.html" class="text-white text-decoration-none">Contacto</a> | <a href="#" class="text-white text-decoration-none">Términos y Condiciones</a></p>
+        </div>
+    </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="../assets/js/scripts.js"></script>

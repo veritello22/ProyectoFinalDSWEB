@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..700&family=Poppins:wght@300;400;600&display=swap');
 :root {
     --uade-dark: #021864; 
     --uade-green: #35B446; 
@@ -7,7 +7,8 @@
     --uade-btn-blue: #021864; 
     --uade-btn-hover: #021864; 
 
-    --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-base: 'Poppins', sans-serif;
+    --font-family-heading: 'Cinzel', serif;
 }
 
 
@@ -15,6 +16,15 @@ body {
     background-color: var(--uade-text-light);
     color: var(--uade-dark); 
     font-family: var(--font-family-base);
+    font-weight: 400;
+}
+h1 {
+    font-family: var(--font-family-heading);
+    font-weight: 600;  
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: 400;
 }
 
 .bg-uade-dark {

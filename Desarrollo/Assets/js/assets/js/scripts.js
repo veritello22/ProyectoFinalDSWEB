@@ -51,6 +51,49 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Opcional: Notificación visual al usuario
         console.log(`Favoritos actualizados. Total: ${favorites.length}`);
+
+        const filterControls = document.getElementById('filter-controls');
+const productCards = document.querySelectorAll('.menu-catalogo .col'); // Asume que el contenedor es .menu-catalogo
+
+if (filterControls && productCards.length > 0) {
+    filterControls.addEventListener('click', function(event) {
+        const target = event.target;
+        
+        // Solo procesar si se hizo clic en un botón con data-filter
+        if (target.tagName === 'BUTTON' && target.dataset.filter) {
+            
+            // Obtener el filtro activo (ej: 'sintacc' o 'todo')
+            const activeFilter = target.dataset.filter;
+            
+            // 1. Actualizar el estado visual de los botones
+            filterControls.querySelectorAll('button').forEach(btn => {
+                btn.classList.remove('active', 'btn-dark');
+                btn.classList.add('btn-outline-secondary');
+            });
+            target.classList.add('active', 'btn-dark');
+            target.classList.remove('btn-outline-secondary');
+            
+            // 2. Ejecutar el filtro
+            productCards.forEach(card => {
+                // Obtener las etiquetas del producto (ej: "vegano healthy")
+                const productTags = card.dataset.filter || 'todo';
+                
+                // Mostrar todos si el filtro es "todo"
+                if (activeFilter === 'todo') {
+                    card.style.display = 'block';
+                    return;
+                }
+                
+                // Verificar si las etiquetas del producto incluyen el filtro activo
+                if (productTags.includes(activeFilter)) {
+                    card.style.display = 'block'; // Mostrar
+                } else {
+                    card.style.display = 'none'; // Ocultar
+                }
+            });
+        }
+    });
+}
     }
 
     /**
