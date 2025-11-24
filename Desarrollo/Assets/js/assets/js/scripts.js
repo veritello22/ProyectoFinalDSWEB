@@ -209,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
         formAlert.className = `alert mt-4 ${type}`;
         formAlert.classList.remove('d-none');
         
-        // Ocultar después de 5 segundos
         setTimeout(() => {
             formAlert.classList.add('d-none');
         }, 5000);

@@ -1,24 +1,19 @@
-/* assets/css/styles.css */
 
 :root {
-    /* Colores primarios */
-    --uade-dark: #021864; /* Azul oscuro del fondo y nav */
-    --uade-green: #35B446; /* Verde de UADEATS */
-    --uade-text-light: #F8F9FA; /* Blanco/Claro para texto sobre fondo oscuro */
+    --uade-dark: #021864; 
+    --uade-green: #35B446; 
+    --uade-text-light: #F8F9FA; 
     
-    /* Colores de acento */
-    --uade-btn-blue: #021864; /* Azul para botones principales */
+    --uade-btn-blue: #021864; 
     --uade-btn-hover: #021864; 
 
-    /* Tipografía */
-    /* Asumo una fuente sans-serif moderna, se puede reemplazar con Google Fonts si se requiere */
     --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-/* Estilo para el fondo oscuro */
+
 body {
     background-color: var(--uade-text-light);
-    color: var(--uade-dark); /* Color de texto por defecto */
+    color: var(--uade-dark); 
     font-family: var(--font-family-base);
 }
 
@@ -30,14 +25,14 @@ body {
     color: #00bf63  !important;
 }
 
-/* Estilos de Botones de Filtro/Acción (Desayuno, Snack, Almuerzo) */
+
 .btn-uade-primary {
     background-color: var(--uade-btn-blue);
     color: var(--uade-text-light);
     border: 1px solid var(--uade-btn-blue);
     font-weight: bold;
     padding: 0.75rem 1.5rem;
-    border-radius: 2rem; /* Bordes redondeados como en el diseño */
+    border-radius: 2rem; 
 }
 
 .btn-uade-primary:hover, .btn-uade-primary:focus {
@@ -46,20 +41,18 @@ body {
     border-color: var(--uade-btn-hover);
 }
 
-/* Estilo para el input de búsqueda */
+
 .search-input-container {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    background-color: #f1f1f1; /* Un color más claro que el fondo */
+    background-color: #f1f1f1; 
     border: 1px solid #dee2e6;
 }
 
-/* ... código CSS anterior ... */
 
-/* Estilos para las tarjetas de producto */
 .product-card {
     transition: transform 0.2s, box-shadow 0.2s;
-    overflow: hidden; /* Asegura que la imagen no se salga */
+    overflow: hidden; 
 }
 
 .product-card:hover {
@@ -67,25 +60,27 @@ body {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
-/* Botón de Favoritos (Corazón) */
 .favorite-btn {
     border-radius: 50%;
     padding: 0.25rem 0.5rem;
-    line-height: 1; /* Elimina espacio extra dentro del botón */
-    background-color: white; /* Fondo blanco para el corazón */
+    line-height: 1;
+    background-color: white; 
     border: 1px solid #ccc;
     z-index: 10;
 }
 
-/* Color del precio como acento */
+
 .card-text.text-success {
     color: var(--uade-green) !important;
 }
 
-/* Estilo para que las imágenes dentro de las tarjetas llenen el contenedor */
+
 .product-card img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
+.text-uade-green-rating {
+    color: #00bf63 !important; 
+}
