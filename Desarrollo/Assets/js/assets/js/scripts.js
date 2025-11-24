@@ -77,4 +77,141 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.body.classList.contains('favs-page')) {
         renderFavorites();
     }
-});
+
+// assets/js/scripts.js (continuación)
+
+// ... (todo el código anterior de toggleFavorite y updateFavoriteIcon) ...
+
+    /**
+     * Función para renderizar los productos favoritos en la página 'favs.html'.
+     */
+    function renderFavorites() {
+        const favoritesListContainer = document.getElementById('favorites-list');
+        const noFavsMessage = document.getElementById('no-favs-message');
+        
+        // 1. Obtener la lista de favoritos
+        const favorites = JSON.parse(sessionStorage.getItem('favorites')) || [];
+
+        // 2. Limpiar el contenedor y mostrar mensaje si no hay favoritos
+        if (favorites.length === 0) {
+            favoritesListContainer.innerHTML = '';
+            favoritesListContainer.appendChild(noFavsMessage); // Añadir el mensaje de no hay favoritos
+            noFavsMessage.style.display = 'block';
+            return;
+        }
+
+        // Si hay favoritos, ocultar el mensaje y generar el HTML
+        if (noFavsMessage) noFavsMessage.style.display = 'none';
+        
+        let htmlContent = '';
+
+        favorites.forEach(item => {
+            // Generar una tarjeta con imagen, nombre, precio y descripción
+            // Nota: La imagen se muestra como un placeholder aquí. 
+            // En producción, necesitarías guardar la URL de la imagen en el objeto 'item'.
+            htmlContent += `
+                <div class="col">
+                    <div class="card mb-3 shadow-sm border-0">
+                        <div class="row g-0 align-items-center">
+                            
+                            <div class="col-4 col-md-2 d-flex justify-content-center">
+                                <div class="ratio ratio-1x1 my-2" style="max-width: 100px;">
+                                    <img src="https://via.placeholder.com/150/f0f0f0?text=Prod" class="img-fluid rounded-start object-fit-cover" alt="Imagen de ${item.name}">
+                                </div>
+                            </div>
+                            
+                            <div class="col-8 col-md-10">
+                                <div class="card-body py-3">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <h5 class="card-title fw-bold mb-1">${item.name}</h5>
+                                        <button class="btn btn-sm btn-outline-danger favorite-btn ms-3" data-product-id="${item.id}" aria-label="Eliminar de favoritos">
+                                            <i class="bi bi-heart-fill text-danger"></i> 
+                                        </button>
+                                    </div>
+                                    <p class="card-text small text-muted">${item.description}</p>
+                                    <p class="card-text fw-bold text-success mt-2">${item.price}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        favoritesListContainer.innerHTML = htmlContent;
+        
+        // Re-asignar el evento click al botón de favorito para que pueda eliminar el ítem
+        document.querySelectorAll('.favorite-btn').forEach(button => {
+             const productId = button.dataset.productId;
+             button.addEventListener('click', () => {
+                 // Llama a toggleFavorite para eliminarlo y luego recarga la lista
+                 toggleFavorite(productId, '', '', button);
+                 renderFavorites(); // Recargar la lista inmediatamente
+             });
+        });
+    }
+
+    // Asegurarse de que el script se ejecute cuando esté en la página de favoritos
+    if (document.body.classList.contains('favs-page')) {
+        renderFavorites();
+    }
+// assets/js/scripts.js (continuación)
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ... (código anterior para favoritos, si existe) ...
+
+    const form = document.getElementById('contactForm');
+    const emailInput = document.getElementById('contactEmail');
+    const formAlert = document.getElementById('formAlert');
+
+    // Patrón Regex simple para validar email (se puede mejorar)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+
+    if (form) {
+        form.addEventListener('submit', function (event) {
+            // Detener el envío del formulario por defecto
+            event.preventDefault(); 
+            event.stopPropagation();
+
+            // 1. Validar campos obligatorios
+            if (!form.checkValidity()) {
+                form.classList.add('was-validated');
+                showAlert('Por favor, completa todos los campos obligatorios correctamente.', 'alert-danger');
+                return;
+            }
+
+            // 2. Validar formato de Email con Regex
+            if (!emailRegex.test(emailInput.value)) {
+                emailInput.classList.add('is-invalid');
+                showAlert('Por favor, verifica el formato del email.', 'alert-danger');
+                form.classList.add('was-validated');
+                return;
+            } else {
+                emailInput.classList.remove('is-invalid');
+            }
+
+            // Si todas las validaciones pasan, mostrar mensaje de éxito
+            showAlert('✅ Mensaje enviado con éxito. ¡Gracias por contactarnos!', 'alert-success');
+            
+            // Opcional: Deshabilitar formulario y resetear
+            form.reset();
+            form.classList.remove('was-validated');
+        }, false);
+    }
+    
+    /**
+     * Muestra una alerta de Bootstrap en la parte superior del formulario.
+     * @param {string} message - Mensaje a mostrar.
+     * @param {string} type - Clase de Bootstrap para el tipo de alerta (ej: 'alert-success').
+     */
+    function showAlert(message, type) {
+        formAlert.textContent = message;
+        formAlert.className = `alert mt-4 ${type}`;
+        formAlert.classList.remove('d-none');
+        
+        // Ocultar después de 5 segundos
+        setTimeout(() => {
+            formAlert.classList.add('d-none');
+        }, 5000);
+    }
+})})
