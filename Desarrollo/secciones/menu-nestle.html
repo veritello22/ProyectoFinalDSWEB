@@ -62,27 +62,27 @@
         </section>
 
         <section class="row mb-4">
-            <div class="col-12 d-flex flex-wrap justify-content-start gap-2">
-                <button type="button" class="btn btn-sm btn-dark rounded-pill active">Todo</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">Sin Tacc</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">Vegano</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">Healthy</button>
+            <div class="col-12 d-flex flex-wrap justify-content-start gap-2" id="filter-buttons">
+                <button type="button" class="btn btn-sm btn-dark rounded-pill active" data-filter="todo">Todo</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="sintacc">Sin Tacc</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="vegano">Vegano</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="healthy">Healthy</button>
             </div>
         </section>
 
         <section class="menu-catalogo">
             
-            <h2 class="h4 fw-bold mb-3">Shaken Espresso</h2>
+            <h2 class="h4 fw-bold mb-3">Bebidas</h2>
             <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
                 
-                <div class="col">
+                <div class="col" data-filter="todo sin tacc vegano">
                     <div class="card h-100 border-0 shadow-sm product-card">
                         <div class="card-img-top ratio ratio-1x1 bg-light">
-                            <img src="../assets/img/STARBUCKS/2022-03_Caramel Frapp 425x425 sin fondo (1).png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                            <img src="../assets/img/Nestle/jugo.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
                         </div>
                         <div class="card-body p-2 position-relative">
-                            <h5 class="card-title h6 mb-0">Avellana c/Bebida de Avena</h5>
-                            <p class="card-text fw-bold text-success mb-0">$6.400</p>
+                            <h5 class="card-title h6 mb-0">Jugo Baggio</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.400</p>
                             <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
                                 <i class="bi bi-heart"></i> 
                             </button>
@@ -90,25 +90,382 @@
                     </div>
                 </div>
                 
-                <div class="col">
+                <div class="col" data-filter="todo sin tacc healthy vegano">
                     <div class="card h-100 border-0 shadow-sm product-card">
                         <div class="card-img-top ratio ratio-1x1 bg-light">
-                            <img src="../assets/img/STARBUCKS/2022-03_Mocha Frapp 425x425 sin fondo.png" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                            <img src="../assets/img/Nestle/agua.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
                         </div>
                         <div class="card-body p-2 position-relative">
-                            <h5 class="card-title h6 mb-0">Chocolate c/Bebida de Avena</h5>
-                            <p class="card-text fw-bold text-success mb-0">$6.500</p>
+                            <h5 class="card-title h6 mb-0">Agua mineralizada</h5>
+                            <p class="card-text fw-bold text-success mb-0">$1.500</p>
                             <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
-                                <i class="bi bi-heart-fill text-danger"></i> </button>
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
                         </div>
                     </div>
                 </div>
+
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/cocacola.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">CocaCola</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            
-            <h2 class="h4 fw-bold mb-3">Cafés Calientes</h2>
+
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/sprite.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Sprite</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo sin tacc healthy vegano">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/limon.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Agua de Limon</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo sin tacc healthy vegano">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/gatorade.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Gatorade</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>  
+            <h2 class="h4 fw-bold mb-3">Dulces</h2>
             <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/bombones.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Bombones</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/chicles.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Chicles</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/chupetin.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Chuppetin</h5>
+                            <p class="card-text fw-bold text-success mb-0">$1.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/mentos.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Mentos</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/chocolate.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Chocolates</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/kitkat.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">KitKat</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/obleas rellenas.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Obleas Rellenas</h5>
+                            <p class="card-text fw-bold text-success mb-0">$1.800</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/oreos.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Oreas</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/rhodesia.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Rhodesia</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/sniker.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Snicker</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/sugus.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Sugus</h5>
+                            <p class="card-text fw-bold text-success mb-0">$1.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>   
+        <section>  
+            <h2 class="h4 fw-bold mb-3">Salado</h2>
+            <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/cheetos.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Cheetos</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/lays.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Papas fritas Lays</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/palitos salados.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Palitos Salados</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/papascebolla.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Papas cebollas</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+        <section>  
+            <h2 class="h4 fw-bold mb-3">Fitness</h2>
+            <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+                <div class="col" data-filter="todo healthy vegano">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/galletas de avena y pasas.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Galletas de Avena y Pasas</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo healthy sin tacc vegano">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/manisalado.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Mani Salado</h5>
+                            <p class="card-text fw-bold text-success mb-0">$1.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo healthy vegano">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/mixfrutossecos.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Mix Frutos Secos</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo healthy sin tacc vegano">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../assets/img/Nestle/pistachos.jpg" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">PPistachos</h5>
+                            <p class="card-text fw-bold text-success mb-0">$5.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart-fill text-danger"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
         
     </main>
