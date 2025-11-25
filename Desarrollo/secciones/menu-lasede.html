@@ -62,27 +62,414 @@
         </section>
 
         <section class="row mb-4">
-            <div class="col-12 d-flex flex-wrap justify-content-start gap-2">
-                <button type="button" class="btn btn-sm btn-dark rounded-pill active">Todo</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">Sin Tacc</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">Vegano</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">Healthy</button>
+            <div class="col-12 d-flex flex-wrap justify-content-start gap-2" id="filter-buttons">
+                <button type="button" class="btn btn-sm btn-dark rounded-pill active" data-filter="todo">Todo</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="sintacc">Sin Tacc</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="vegano">Vegano</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="healthy">Healthy</button>
             </div>
         </section>
 
         <section class="menu-catalogo">
-            
-            <h2 class="h4 fw-bold mb-3">Shaken Espresso</h2>
+            <section>
+            <h2 class="h4 fw-bold mb-3">Comida</h2>
             <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
-                
-                <div class="col">
+                <div class="col" data-filter="todo">
                     <div class="card h-100 border-0 shadow-sm product-card">
                         <div class="card-img-top ratio ratio-1x1 bg-light">
-                            <img src="../assets/img/STARBUCKS/2022-03_Caramel Frapp 425x425 sin fondo (1).png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                            <img src="../Assets/img/lasede/spaguetis.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
                         </div>
                         <div class="card-body p-2 position-relative">
-                            <h5 class="card-title h6 mb-0">Avellana c/Bebida de Avena</h5>
-                            <p class="card-text fw-bold text-success mb-0">$6.400</p>
+                            <h5 class="card-title h6 mb-0">Spaguetis con salsa</h5>
+                            <p class="card-text fw-bold text-success mb-0">$10.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/pizza.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Pizza</h5>
+                            <p class="card-text fw-bold text-success mb-0">$10.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/papas con chedar.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Papas con Cheddar</h5>
+                            <p class="card-text fw-bold text-success mb-0">$6.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo sin tacc healthy vegano">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/ensaladas.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Ensalada</h5>
+                            <p class="card-text fw-bold text-success mb-0">$8.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/tostados arabes.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Tostados de pan arabe</h5>
+                            <p class="card-text fw-bold text-success mb-0">$10.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/sandwich de jyq.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Spandwiches completos</h5>
+                            <p class="card-text fw-bold text-success mb-0">$7.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/libritos.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Pan librito</h5>
+                            <p class="card-text fw-bold text-success mb-0">$1.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/baguel.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Sandwich Bagel</h5>
+                            <p class="card-text fw-bold text-success mb-0">$8.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/milanesas.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Milanesas (varias)</h5>
+                            <p class="card-text fw-bold text-success mb-0">$10.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/empanada.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Empanadas</h5>
+                            <p class="card-text fw-bold text-success mb-0">$4.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo sin tacc">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/chipa.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Chipa</h5>
+                            <p class="card-text fw-bold text-success mb-0">$1.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-filter="todo sin tacc">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/chipas.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Chipas por 1/4</h5>
+                            <p class="card-text fw-bold text-success mb-0">$4.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="h4 fw-bold mb-3">Dulces</h2>
+            <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+                 <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/medialunas.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Medialunas</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/churros.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Churros</h5>
+                            <p class="card-text fw-bold text-success mb-0">$1.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/brownie.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Brownie</h5>
+                            <p class="card-text fw-bold text-success mb-0">$4.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col" data-filter="todo sin tacc">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/alfajordemaicena.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Alfajor de Maicena</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/tiramisu.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Tiramisu</h5>
+                            <p class="card-text fw-bold text-success mb-0">$8.000</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/cookies.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Cookies</h5>
+                            <p class="card-text fw-bold text-success mb-0">$5.100</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/conitos.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Conitos</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col" data-filter="todo sin tacc healthy vegano">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/fruta.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Fruta</h5>
+                            <p class="card-text fw-bold text-success mb-0">$1.000</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col" data-filter="todo healthy sin tacc">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/yogurtconfrutas.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Yogurt con frutas</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/muffindechips.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Muffins</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col" data-filter="todo healthy vegano sin tacc">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/ensaladadefrutas.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Ensalada de Frutas</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/alfajores.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Alfajores</h5>
+                            <p class="card-text fw-bold text-success mb-0">$3.200</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/caramelos.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Caramelos</h5>
+                            <p class="card-text fw-bold text-success mb-0">$800</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+            <section>
+            <h2 class="h4 fw-bold mb-3">Bebidas</h2>
+            <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+                
+                <div class="col" data-filter="todo healthy vegano">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/agua.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Agua</h5>
+                            <p class="card-text fw-bold text-success mb-0">$1.200</p>
                             <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
                                 <i class="bi bi-heart"></i> 
                             </button>
@@ -90,26 +477,53 @@
                     </div>
                 </div>
                 
-                <div class="col">
+                <div class="col" data-filter="todo healthy vegano">
                     <div class="card h-100 border-0 shadow-sm product-card">
                         <div class="card-img-top ratio ratio-1x1 bg-light">
-                            <img src="../assets/img/STARBUCKS/2022-03_Mocha Frapp 425x425 sin fondo.png" class="object-fit-cover w-100 h-100" alt="Chocolate con Bebida de Avena">
+                            <img src="../Assets/img/lasede/jugo.jpg" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
                         </div>
                         <div class="card-body p-2 position-relative">
-                            <h5 class="card-title h6 mb-0">Chocolate c/Bebida de Avena</h5>
-                            <p class="card-text fw-bold text-success mb-0">$6.500</p>
+                            <h5 class="card-title h6 mb-0">Jugo</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.000</p>
                             <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
-                                <i class="bi bi-heart-fill text-danger"></i> </button>
+                                <i class="bi bi-heart"></i> 
+                            </button>
                         </div>
                     </div>
                 </div>
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/cocacola.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Coca Cola</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            
-            <h2 class="h4 fw-bold mb-3">Cafés Calientes</h2>
-            <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+
+                <div class="col" data-filter="todo">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <div class="card-img-top ratio ratio-1x1 bg-light">
+                            <img src="../Assets/img/lasede/sprite.png" class="object-fit-cover w-100 h-100" alt="Avellana con bebida de Avena">
+                        </div>
+                        <div class="card-body p-2 position-relative">
+                            <h5 class="card-title h6 mb-0">Sprite</h5>
+                            <p class="card-text fw-bold text-success mb-0">$2.500</p>
+                            <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 favorite-btn" aria-label="Añadir a favoritos">
+                                <i class="bi bi-heart"></i> 
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            
-        </section>
+
+                </div>
+            </section>
         
     </main>
 
