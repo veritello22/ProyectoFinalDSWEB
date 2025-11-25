@@ -51,6 +51,10 @@ h2, h3, h4, h5, h6 {
     border-color: var(--uade-btn-hover);
 }
 
+.locales img:hover{
+    box-shadow: 0px 0px 3px;
+    border-radius: 5px;
+}
 
 .search-input-container {
     padding: 0.5rem 1rem;
@@ -59,10 +63,26 @@ h2, h3, h4, h5, h6 {
     border: 1px solid #dee2e6;
 }
 
+#offcanvasNavbar{
+    width: 70vw;
+}
+
+.card-body{
+    align-items: center;
+}
+
+.card-body > *:first-child{
+    align-items: center!important;
+    display: grid !important;
+    grid-template-columns: 5fr 1fr;
+}
 
 .product-card {
     transition: transform 0.2s, box-shadow 0.2s;
     overflow: hidden; 
+    height: 100%;
+    display: grid;
+    grid-template-rows: 60% 1fr;
 }
 
 .product-card:hover {
@@ -93,4 +113,15 @@ h2, h3, h4, h5, h6 {
 
 .text-uade-green-rating {
     color: #00bf63 !important; 
+}
+
+@media(max-width: 468px) {
+    #filtrosComida div {
+        width: 100%;
+    }
+
+    #logo{
+        width: 65px;
+        height: 65px;
+    }
 }

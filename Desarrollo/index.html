@@ -16,8 +16,8 @@
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg bg-uade-dark" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="assets/img/UADE nav.png" alt="Logo UADE" width="80" height="80" class="me-2">
+                <a class="navbar-brand d-flex align-items-center" href="index.html" style="margin-left: 10px;">
+                    <img src="assets/img/UADE nav.png" id="logo" alt="Logo UADE" width="110" height="110" class="me-2">
                         <img src="Assets/img/Logonombre.png" alt="Logo UADEATS" class="d-none d-lg-block mx-auto" style="max-width: 150px; position: absolute; left: 50%; transform: translateX(-50%);">
                 </a>
 
@@ -50,7 +50,7 @@
     
     <main class="container-fluid" id="top">
         
-        <section class="row py-3 px-3">
+        <!-- <section class="row py-3 px-3">
             <div class="col-12">
                 <form class="input-group search-input-container">
                     <input id="searchInput" type="search" class="form-control border-0 bg-transparent" placeholder="Qué deseas comer hoy?" aria-label="Búsqueda de comida">
@@ -59,7 +59,7 @@
                     </button>
                 </form>
             </div>
-        </section>
+        </section> -->
 
         <section class="row text-center py-5 px-3">
             <h2 class="visually-hidden">Cómo funciona UADEATS</h2> <div class="col-md-4 mb-4">
@@ -85,7 +85,7 @@
             </div>
         </section>
 
-        <section class="row justify-content-center text-center pb-5 px-3">
+        <section id="filtrosComida" class="row justify-content-center text-center pb-5 px-3">
             <h2 class="visually-hidden">Filtros de Comida</h2>
             <div class="col-4 col-md-3 mb-2">
                 <a href="secciones/desayuno.html" class="btn btn-uade-primary w-100">Desayuno</a>
@@ -141,22 +141,22 @@
             <div class="col-12 mb-4">
                 <h1 class="h3 fw-bold text-uade-dark">NUESTROS LOCALES</h1>
             </div>
-            <div class="col-6 col-md-3 mb-4">
+            <div class="col-6 col-md-3 mb-4 locales">
                 <a href="secciones/menu-starbucks.html" class="d-block text-decoration-none text-dark">
                     <img src="assets/img/starbucks-logo.png" alt="Logo de Starbucks Coffee" class="img-fluid" style="max-height: 200px;">
                 </a>
             </div>
-            <div class="col-6 col-md-3 mb-4">
+            <div class="col-6 col-md-3 mb-4 locales">
                 <a href="secciones/menu-nestle.html" class="d-block text-decoration-none text-dark">
                     <img src="assets/img/nestle-logo.png" alt="Logo de Nestlé - Good food, Good life" class="img-fluid" style="max-height: 200px;">
                 </a>
             </div>
-            <div class="col-6 col-md-3 mb-4">
+            <div class="col-6 col-md-3 mb-4 locales">
                 <a href="secciones/menu-rustica.html" class="d-block text-decoration-none text-dark">
                     <img src="assets/img/RUSTICAlogo.png" alt="Logo de Rústica, La Pastelería" class="img-fluid" style="max-height: 200px;">
                 </a>
             </div>
-            <div class="col-6 col-md-3 mb-4">
+            <div class="col-6 col-md-3 mb-4 locales">
                 <a href="secciones/menu-lasede.html" class="d-block text-decoration-none text-dark">
                     <img src="assets/img/lasedelogo.png" alt="Logo de La Sede Comedor" class="img-fluid" style="max-height: 200px;">
                 </a>
@@ -174,6 +174,6 @@
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="Assets/js/assets/js/scripts.js"></script>
+    <script src="./Assets/js/scripts.js"></script>
 </body>
 </html>
