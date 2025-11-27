@@ -87,7 +87,9 @@ function renderFavorites() {
         container.innerHTML += `
             <div class="col">
                 <div class="card product-card">
-                    <img src="${item.image}" class="card-img-top" />
+                    <div class="card-img-top ratio ratio-1x1 bg-light">
+                        <img src="${item.image}" class="object-fit-cover w-100 h-100" />
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">${item.title}</h5>
                         <p class="card-text">${item.price}</p>
